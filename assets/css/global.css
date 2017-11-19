@@ -1,0 +1,96 @@
+@import './color.css';
+html {
+	font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	word-spacing: 1px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	color: var(--text);
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+}
+a {
+    text-decoration: none !important;
+}
+.btn, .pointer, select {
+	cursor: pointer;
+}
+.noDrop {
+	cursor: no-drop;
+}
+.blue {
+	color: var(--blue);
+}
+.btn-blue {
+	color: #fff;
+	background-color: var(--blue);
+	border-color: var(--darkBlue);
+}
+.btn-red {
+	color: #fff;
+	background-color: var(--red);
+	border-color: var(--darkRed);
+}
+.btn-grey {
+	color: #fff;
+	background-color: var(--grey);
+	border-color: var(--text);
+}
+.btn-blue:hover, .btn-red:hover, .btn-grey:hover, .hover60:hover, .o-60 {
+	opacity: 0.6;
+}
+.btn-inverse-blue {
+	background-color: #fff;
+	border-color: var(--darkBlue);
+}
+.btn-inverse-blue:hover {
+	color: #fff;
+	background-color: var(--blue);
+}
+.btn-inverse-red {
+	background-color: #fff;
+	border-color: var(--darkRed);
+}
+.btn-inverse-red:hover {
+	color: #fff;
+	background-color: var(--red);
+}
+.btn-inverse-grey {
+	background-color: #fff;
+	border-color: var(--text);
+}
+.btn-inverse-grey:hover {
+	color: #fff;
+	background-color: var(--grey);
+}
+.form-control:focus {
+	border-color: var(--darkBlue);
+}
+.box-shadow {
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+/* START Sticky footer */
+.flex-grow {
+	flex: 1;
+}
+.flex-column {
+	flex-direction: column;
+	min-height: 100vh;
+	display: flex;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.flex-grow {
+		flex: none;
+	}
+	.flex-column {
+		display: block;
+	}
+}
+/* END Sticky footer */
