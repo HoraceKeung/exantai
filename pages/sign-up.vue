@@ -1,8 +1,6 @@
 <template>
 	<section>
-		<div class="container">
-			<h1 class="text-uppercase text-center">Exantai</h1>
-		</div>
+		<h1>SIGN UP</h1>
 	</section>
 </template>
 

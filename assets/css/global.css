@@ -17,14 +17,28 @@ html {
 a {
     text-decoration: none !important;
 }
-.btn, .pointer, select {
+.btn, .pointer, select, button {
 	cursor: pointer;
+}
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
+	box-shadow: none;
+}
+.btn {
+	border-width: 2px;
 }
 .noDrop {
 	cursor: no-drop;
 }
-.blue {
+.text-color {
+	color: var(--text);
+}
+.blue, .hoverBlue:hover {
 	color: var(--blue);
+}
+.darkBlue {
+	color: var(--darkBlue);
 }
 .btn-blue {
 	color: #fff;
@@ -43,6 +57,9 @@ a {
 }
 .btn-blue:hover, .btn-red:hover, .btn-grey:hover, .hover60:hover, .o-60 {
 	opacity: 0.6;
+}
+.hover100:hover {
+	opacity: 1;
 }
 .btn-inverse-blue {
 	background-color: #fff;
@@ -75,6 +92,9 @@ a {
 	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.hoverWhite:hover {
+	color: #fff;
 }
 /* START Sticky footer */
 .flex-grow {

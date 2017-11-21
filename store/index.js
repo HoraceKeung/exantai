@@ -5,7 +5,14 @@ export const plugins = [createPersistedState({
 })]
 
 export const state = () => ({
-	authObj: null
+	authObj: null,
+	navLinks: [
+		{name: 'Home', path: '/'},
+		{name: 'Product', path: '/product'},
+		{name: 'About', path: '/about'},
+		{name: 'Contact', path: '/contact'}
+	],
+	currentYear: new Date().getFullYear()
 })
 
 export const mutations = {
