@@ -14,8 +14,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .navbar-offset {
 	margin-top: 4rem;
+}
+h1 {
+	text-align: center;
+	text-transform: uppercase;
 }
 </style>

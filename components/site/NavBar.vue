@@ -8,11 +8,11 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li v-for="l in navLinks" class="nav-item">
-						<router-link :class="'nav-link text-uppercase '+($route.path===l.path?'darkBlue':'text-color hoverBlue')" :to="l.path">{{l.name}}</router-link>
+						<router-link :class="'nav-link text-uppercase '+($route.path===l.path?'darkBlue':'text-color hoverBlue')" :to="l.path">{{lang[l.name]}}</router-link>
 					</li>
 				</ul>
-				<router-link class="btn btn-grey hoverWhite text-uppercase mr-2" to="/login">Log in</router-link>
-				<router-link class="btn btn-blue hoverWhite text-uppercase" to="/sign-up">Sign up</router-link>
+				<router-link class="btn btn-grey hoverWhite text-uppercase mr-2" to="/login">{{lang[4]}}</router-link>
+				<router-link class="btn btn-blue hoverWhite text-uppercase" to="/sign-up">{{lang[5]}}</router-link>
 			</div>
 		</div>
 	</nav>

@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1>ABOUT</h1>
+		<h1>{{lang[10]}}</h1>
 	</section>
 </template>
 

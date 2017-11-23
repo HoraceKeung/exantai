@@ -53,7 +53,7 @@ module.exports = {
 		'font-awesome/css/font-awesome.css',
 		'@/assets/css/global.css'
 	],
-	plugins: ['~/plugins/main.js'],
+	plugins: ['~/plugins/lang.js', '~/plugins/main.js'],
 	router: {
 		middleware: 'routeGuard'
 	}

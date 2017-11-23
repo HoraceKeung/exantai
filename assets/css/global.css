@@ -14,6 +14,9 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 }
+h1, h2, h3, h4, h5 {
+	margin-bottom: 1rem;
+}
 a {
     text-decoration: none !important;
 }
@@ -28,7 +31,7 @@ a {
 .btn {
 	border-width: 2px;
 }
-.noDrop {
+.noDrop, button:disabled {
 	cursor: no-drop;
 }
 .text-color {
@@ -87,6 +90,11 @@ a {
 }
 .form-control:focus {
 	border-color: var(--darkBlue);
+	box-shadow: none;
+}
+.form-control.is-invalid:focus {
+	border-color: var(--darkRed);
+	box-shadow: none;
 }
 .box-shadow {
 	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);

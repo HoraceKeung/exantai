@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1>T&Cs</h1>
+		<h1>{{lang[9]}}</h1>
 	</section>
 </template>
 
@@ -8,6 +8,3 @@
 export default {
 }
 </script>
-
-<style>
-</style>
