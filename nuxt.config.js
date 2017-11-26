@@ -51,7 +51,7 @@ module.exports = {
 	css: [
 		'bootstrap/dist/css/bootstrap.css',
 		'font-awesome/css/font-awesome.css',
-		'@/assets/css/global.css'
+		'@/assets/css/global.scss'
 	],
 	plugins: ['~/plugins/lang.js', '~/plugins/main.js'],
 	router: {

@@ -1,13 +1,13 @@
 const alertController = {
-	callAlert: function (store, type, message = 'Something went wrong!', channel = 'all') {
+	callAlert: function ({$store}, channel = 'default', type = 'danger', message = $store.state.lang[28]) {
 		var newAlert = {
 			type, // success/danger/info/warning
 			message, // string
 			channel // only matching channel will display alert
 		}
-		store.commit('alert/pushToAlertQueue', newAlert)
-		if (!store.state.alert.isCheckingAlertQueue) {
-			checkAlertQueue(store)
+		$store.commit('alert/pushToAlertQueue', newAlert)
+		if (!$store.state.alert.isCheckingAlertQueue) {
+			checkAlertQueue($store)
 		}
 	}
 }

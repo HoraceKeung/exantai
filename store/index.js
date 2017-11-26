@@ -15,20 +15,27 @@ export const state = () => ({
 		{name: 2, path: '/about'},
 		{name: 3, path: '/contact'}
 	],
-	currentYear: new Date().getFullYear()
+	currentYear: new Date().getFullYear(),
+	isLoading: []
 })
 
 export const mutations = {
 	setAuthObj (state, obj) {
 		state.authObj = obj
 	},
-	SET_LANG (state, arr) {
+	setLang (state, arr) {
 		state.lang = arr
 	},
-	SET_CURRENT_LANG_NAME (state, name) {
+	setCurrentLangName (state, name) {
 		state.currentLangName = name
 	},
-	SET_LANG_NAMES (state, names) {
+	setLangNames (state, names) {
 		state.langNames = names
+	},
+	newFetch (state, channel) {
+		state.isLoading.push(channel)
+	},
+	fetchDone (state, channel) {
+		state.isLoading.splice(state.isLoading.indexOf(channel), 1)
 	}
 }

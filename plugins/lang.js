@@ -3,8 +3,8 @@ export default ({store}) => {
 	const langs = context.keys().map(k => {
 		return k.split('/')[1].split('.')[0]
 	})
-	store.commit('SET_LANG_NAMES', langs)
+	store.commit('setLangNames', langs)
 	const arr = require('../static/languages/english.json')
-	store.commit('SET_LANG', arr)
-	store.commit('SET_CURRENT_LANG_NAME', 'english')
+	store.commit('setLang', arr)
+	store.commit('setCurrentLangName', 'english')
 }

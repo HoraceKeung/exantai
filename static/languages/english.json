@@ -23,8 +23,13 @@
 	"Message",
 	"Message required",
 	"Password",
-	"Password required",
-	"Password",
-	"Password required",
-	"Submit"
+	"Password invalid",
+	"Position",
+	"Position required",
+	"Submit",
+	"Something went wrong!",
+	"Thank you for getting in touch.",
+	"Tick to receive information about our products by:",
+	"Email",
+	"Phone"
 ]
