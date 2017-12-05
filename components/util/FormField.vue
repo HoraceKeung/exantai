@@ -1,7 +1,7 @@
 <template>
 	<div class="form-group">
 		<label :for="label">{{lang[label]}}<small v-if="optional"> ({{lang[12]}})</small>
-			<i v-if="tooltip" class="fa fa-question-circle ml-1 hoverBlue" aria-hidden="true" data-toggle="tooltip" data-placement="top" :title="tooltip"></i>
+			<i v-if="tooltip" class="fa fa-question-circle ml-1 hoverBlue" aria-hidden="true" data-toggle="tooltip" data-placement="top" :title="lang[tooltip]"></i>
 		</label>
 		<textarea v-if="type==='textarea'" @input="update($event.target.value)" :class="'form-control'+(invalid?' is-invalid':'')" :id="label" rows="3"></textarea>
 		<!-- START Checkbox/Radio -->
@@ -19,6 +19,15 @@
 				<i :class="'fa fa-eye'+(isShowPassword?'-slash':'')" aria-hidden="true"></i>
 			</div>
 		</div>
+		<!-- START Strength bar -->
+		<div v-if="typeof strength === 'number'" class="container">
+			<div class="row mt-1">
+				<div v-for="n in 4" class="col-3 px-0">
+					<div :class="'strength-bar border border-secondary rounded '+(strength>(n-1)?(strength===1?'bg-danger':(strength===2?'bg-warning':'bg-success')):'bg-white')"></div>
+				</div>
+			</div>
+		</div>
+		<!-- END Strength bar -->
 		<div :class="'invalid-feedback'+(invalid?' d-block':'')">{{lang[errMsg]}}</div>
 	</div>
 </template>
@@ -37,7 +46,8 @@ export default {
 		invalid: {type: Boolean, default: false},
 		options: Array,
 		isShowPassword: Boolean,
-		tooltip: String
+		tooltip: Number,
+		strength: Number
 	},
 	mounted () {
 		this.$nextTick(() => {
@@ -84,6 +94,10 @@ export default {
 
 <style scoped>
 @import '../../assets/css/color.css';
+.strength-bar {
+	transition: all 0.5s;
+	height: 0.5rem;
+}
 .contactNumber::-webkit-inner-spin-button,
 .contactNumber::-webkit-outer-spin-button {
 	-webkit-appearance: none;

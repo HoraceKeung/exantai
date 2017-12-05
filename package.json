@@ -20,9 +20,11 @@
     "moment": "^2.19.2",
     "node-sass": "^4.7.1",
     "nuxt": "^1.0.0-rc11",
+    "parse": "^1.11.0",
     "popper.js": "^1.12.9",
     "sass-loader": "^6.0.6",
-    "vuex-persistedstate": "^2.3.2"
+    "vuex-persistedstate": "^2.3.2",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

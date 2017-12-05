@@ -6,7 +6,8 @@
 				<form class="mb-3">
 					<form-field v-for="f in computedFields" :key="f.name" :form.sync="form" :name="f.name"
 					:label="f.label" :type="f.type" :optional="f.optional" :errMsg="f.errMsg"
-					:invalid="f.invalid" :options="f.options" :isShowPassword.sync="isShowPassword" :tooltip="f.tooltip" />
+					:invalid="f.invalid" :options="f.options" :isShowPassword.sync="isShowPassword" :tooltip="f.tooltip"
+					:strength="f.strength" />
 					<button :disabled="!formValid" type="submit" class="btn btn-blue mx-auto d-block" @click.prevent="submit">
 						<vue-spinner :channel="channel" :text="lang[btnText]" :isWhite="true" />
 					</button>
@@ -22,6 +23,7 @@ import FormField from './FormField'
 import VueAlert from './VueAlert'
 import VueSpinner from './VueSpinner'
 import util from '~/assets/js/util'
+import zxcvbn from 'zxcvbn'
 export default {
 	components: {FormField, VueAlert, VueSpinner},
 	props: {
@@ -39,11 +41,14 @@ export default {
 					switch (f.type) {
 					case 'email':
 						return util.checkEmail(this.form[f.name])
+					case 'password':
+						return f.strict ? util.checkPassword(this.form[f.name]) : util.isExist(this.form[f.name])
 					default:
 						return util.isExist(this.form[f.name])
 					}
 				}
 				clone.invalid = this.submittedOnce && !f.optional && !validate()
+				if (f.type === 'password' && f.strict && typeof this.form[f.name] === 'string') { clone.strength = zxcvbn(this.form[f.name]).score }
 				return clone
 			})
 		},
