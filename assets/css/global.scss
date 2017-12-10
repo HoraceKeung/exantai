@@ -18,6 +18,10 @@ html {
 h1, h2, h3, h4, h5 {
 	margin-bottom: 1rem;
 }
+.site-h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
 a {
     text-decoration: none !important;
 }
@@ -40,6 +44,7 @@ a {
 }
 .btn {
 	border-width: 2px;
+	text-transform: uppercase;
 }
 .noDrop, button:disabled {
 	cursor: no-drop;

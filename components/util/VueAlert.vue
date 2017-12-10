@@ -1,7 +1,9 @@
 <template>
-	<div v-if="currentAlert&&currentAlert.channel===channel" :class="'alert alert-'+currentAlert.type" role="alert">
-		<i :class="'fa '+alertIcon" ara-hidden="true"></i> {{currentAlert.message}}
-	</div>
+	<transition enter-active-class="animated fadeInUp" leave-active-class="animated fadeOut">
+		<div v-if="currentAlert&&currentAlert.channel===channel" :class="'alert alert-'+currentAlert.type" role="alert">
+			<i :class="'fa '+alertIcon" ara-hidden="true"></i> {{currentAlert.message}}
+		</div>
+	</transition>
 </template>
 
 <script>

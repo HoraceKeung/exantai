@@ -51,6 +51,7 @@ module.exports = {
 	css: [
 		'bootstrap/dist/css/bootstrap.css',
 		'font-awesome/css/font-awesome.css',
+		'animate.css/animate.min.css',
 		'@/assets/css/global.scss'
 	],
 	plugins: ['~/plugins/main.js'],

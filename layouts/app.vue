@@ -14,8 +14,5 @@ export default {
 }
 </script>
 
-<style scoped>
-.navbar-offset {
-	margin-top: 4rem;
-}
+<style>
 </style>

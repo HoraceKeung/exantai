@@ -11,8 +11,8 @@
 						<router-link :class="'nav-link text-uppercase '+($route.path===l.path?'darkBlue':'text-color hoverBlue')" :to="l.path">{{lang[l.name]}}</router-link>
 					</li>
 				</ul>
-				<router-link class="btn btn-grey hoverWhite text-uppercase mr-2" to="/login">{{lang[4]}}</router-link>
-				<router-link class="btn btn-blue hoverWhite text-uppercase" to="/sign-up">{{lang[5]}}</router-link>
+				<router-link class="btn btn-grey hoverWhite mr-2" to="/login">{{lang[4]}}</router-link>
+				<router-link class="btn btn-blue hoverWhite" to="/sign-up">{{lang[5]}}</router-link>
 			</div>
 		</div>
 	</nav>
