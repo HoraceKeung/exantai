@@ -33,5 +33,6 @@
 	"Email",
 	"Phone",
 	"Must have at least strength of 3",
-	"Account"
+	"Account",
+	"Report"
 ]

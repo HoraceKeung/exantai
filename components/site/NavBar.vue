@@ -1,7 +1,7 @@
 <template>
-	<nav class="navbar fixed-top navbar-expand-lg bg-white">
+	<nav class="navbar header-shadow fixed-top navbar-expand-lg bg-white">
 		<div class="container">
-			<router-link to="/"><img class="navbar-brand" src='~/assets/img/logo.png'></router-link>
+			<router-link to="/"><img class="navbar-brand" src="~/assets/img/logo.png"></router-link>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -27,12 +27,6 @@ export default {
 </script>
 
 <style scoped>
-@import '../../assets/css/color.css';
-.navbar {
-	-webkit-box-shadow: 0px 1px 0px 0px var(--darkBlue);
-	-moz-box-shadow: 0px 1px 0px 0px var(--darkBlue);
-	box-shadow: 0px 1px 0px 0px var(--darkBlue);
-}
 .navbar-brand {
 	height: 3rem;
 }

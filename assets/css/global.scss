@@ -18,8 +18,7 @@ html {
 h1, h2, h3, h4, h5 {
 	margin-bottom: 1rem;
 }
-.site-h1 {
-	text-align: center;
+h1 {
 	text-transform: uppercase;
 }
 a {
@@ -33,6 +32,9 @@ a {
 }
 .darkBlue {
 	color: var(--darkBlue);
+}
+.bg-darkBlue {
+	background-color: var(--darkBlue);
 }
 .btn, .pointer, select, button {
 	cursor: pointer;
@@ -104,6 +106,16 @@ a {
 .form-control.is-invalid:focus {
 	border-color: var(--darkRed);
 	box-shadow: none;
+}
+.header-shadow {
+	-webkit-box-shadow: 0px 1px 0px 0px var(--darkBlue);
+	-moz-box-shadow: 0px 1px 0px 0px var(--darkBlue);
+	box-shadow: 0px 1px 0px 0px var(--darkBlue);
+}
+.footer-shadow {
+	-webkit-box-shadow: 0px -1px 0px 0px var(--darkBlue);
+	-moz-box-shadow: 0px -1px 0px 0px var(--darkBlue);
+	box-shadow: 0px -1px 0px 0px var(--darkBlue);
 }
 .box-shadow {
 	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);

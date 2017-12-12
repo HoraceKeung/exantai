@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer class="bg-darkBlue">
 		<div class="container py-4 text-center">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -34,10 +34,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-@import '../../assets/css/color.css';
-footer {
-	background-color: var(--darkBlue);
-}
-</style>

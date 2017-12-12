@@ -1,13 +1,12 @@
 <template>
 	<section>
-		<div class="container">
-			<h1 class="text-center">Exantai</h1>
-		</div>
+		<h1>{{lang[35]}}</h1>
 	</section>
 </template>
 
 <script>
 export default {
+	layout: 'app'
 }
 </script>
 

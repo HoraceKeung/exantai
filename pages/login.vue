@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1 class="site-h1">{{lang[4]}}</h1>
+		<h1 class="text-center">{{lang[4]}}</h1>
 		<vue-form :fields="fields" :btnText="4" :submitFn="logIn" channel="logIn" />
 	</section>
 </template>

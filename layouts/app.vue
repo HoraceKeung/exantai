@@ -1,18 +1,28 @@
 <template>
-	<div class="flex-column">
-		<nav-bar />
-		<div class="flex-grow navbar-offset bg-light py-5"><nuxt/></div>
-		<page-footer />
+	<div class="d-flex" id="app-layout">
+		<app-menu />
+		<div class="flex-column w-100">
+			<app-header />
+			<div class="flex-grow header-offset bg-light py-3"><div class="container-fluid"><nuxt/></div></div>
+			<app-footer />
+		</div>
 	</div>
 </template>
 
 <script>
-import NavBar from '~/components/site/NavBar'
-import PageFooter from '~/components/site/PageFooter'
+import AppMenu from '~/components/app/AppMenu'
+import AppHeader from '~/components/app/AppHeader'
+import AppFooter from '~/components/app/AppFooter'
 export default {
-	components: {NavBar, PageFooter}
+	components: {AppMenu, AppHeader, AppFooter}
 }
 </script>
 
-<style>
+<style scoped>
+#app-layout {
+	overflow-x: hidden;
+}
+.header-offset {
+	margin-top: 3rem;
+}
 </style>

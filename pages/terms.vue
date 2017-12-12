@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1 class="site-h1">{{lang[9]}}</h1>
+		<h1 class="text-center">{{lang[9]}}</h1>
 	</section>
 </template>
 
