@@ -1,14 +1,13 @@
-import createPersistedState from 'vuex-persistedstate'
+// import createPersistedState from 'vuex-persistedstate'
 
-export const plugins = [createPersistedState({
-	paths: ['authObj']
-})]
+// export const plugins = [createPersistedState({
+// 	paths: ['']
+// })]
 
 export const state = () => ({
 	lang: null,
 	currentLangName: null,
 	langNames: null,
-	authObj: null,
 	navLinks: [
 		{name: 0, path: '/'},
 		{name: 1, path: '/product'},
@@ -20,9 +19,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-	setAuthObj (state, obj) {
-		state.authObj = obj
-	},
 	setLang (state, arr) {
 		state.lang = arr
 	},
@@ -32,10 +28,10 @@ export const mutations = {
 	setLangNames (state, names) {
 		state.langNames = names
 	},
-	newFetch (state, channel) {
+	newFetch (state, channel = 'default') {
 		state.isLoading.push(channel)
 	},
-	fetchDone (state, channel) {
+	fetchDone (state, channel = 'default') {
 		state.isLoading.splice(state.isLoading.indexOf(channel), 1)
 	}
 }

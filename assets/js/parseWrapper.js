@@ -36,6 +36,22 @@ const parseWrapper = {...alertController,
 			$store.commit('fetchDone', 'logIn')
 			alertController.callAlert({$store}, 'logIn', 'danger', err.message)
 		})
+	},
+	logOut ({$store, $router}) {
+		Parse.User.logOut().then(() => { $router.push('/login') })
+	},
+	getUser () {
+		return Parse.User.current()
+	},
+	run ({$store}, endPoint, params) {
+		$store.commit('newFetch')
+		return Parse.Cloud.run(endPoint, params).then(r => {
+			$store.commit('fetchDone')
+			return r
+		}).catch(err => {
+			console.log(JSON.stringify(err, null, 4))
+			$store.commit('fetchDone')
+		})
 	}
 }
 
