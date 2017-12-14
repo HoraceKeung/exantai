@@ -43,14 +43,14 @@ const parseWrapper = {...alertController,
 	getUser () {
 		return Parse.User.current()
 	},
-	run ({$store}, endPoint, params) {
-		$store.commit('newFetch')
+	run ({$store}, endPoint, params, channel = 'run') {
+		$store.commit('newFetch', channel)
 		return Parse.Cloud.run(endPoint, params).then(r => {
-			$store.commit('fetchDone')
+			$store.commit('fetchDone', channel)
 			return r
 		}).catch(err => {
 			console.log(JSON.stringify(err, null, 4))
-			$store.commit('fetchDone')
+			$store.commit('fetchDone', channel)
 		})
 	}
 }
