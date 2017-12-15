@@ -33,6 +33,12 @@ a {
 .darkBlue {
 	color: var(--darkBlue);
 }
+.red {
+	color: var(--red);
+}
+.hoverDarkRed:hover {
+	color: var(--darkRed);
+}
 .bg-darkBlue {
 	background-color: var(--darkBlue);
 }
