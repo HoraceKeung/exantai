@@ -1,3 +1,5 @@
+import util from '~/assets/js/util'
+
 export default function ({ redirect, route, store }) {
-	// LOGIC
+	if (route.path.includes('/app/') && !util.getUser()) { redirect('/login') }
 }
