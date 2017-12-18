@@ -9,7 +9,9 @@
 <script>
 import NavBar from '~/components/site/NavBar'
 import PageFooter from '~/components/site/PageFooter'
+import mixin from '~/assets/js/mixin'
 export default {
+	mixins: [mixin.global],
 	components: {NavBar, PageFooter}
 }
 </script>

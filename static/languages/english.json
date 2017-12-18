@@ -37,5 +37,8 @@
 	"Report",
 	"Report element",
 	"Input string",
-	"Log out"
+	"Log out",
+	"Add report element",
+	"Global input string",
+	"Global input string tooltip"
 ]

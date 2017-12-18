@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import _ from 'lodash'
 export default {
 	props: {
@@ -48,13 +47,6 @@ export default {
 		isShowPassword: Boolean,
 		tooltip: Number,
 		strength: Number
-	},
-	mounted () {
-		this.$nextTick(() => {
-			$(function () {
-				$('[data-toggle="tooltip"]').tooltip()
-			})
-		})
 	},
 	computed: {
 		computedType () {

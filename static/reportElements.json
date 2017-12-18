@@ -1,0 +1,74 @@
+[
+	{
+		"name": "Technology information",
+		"children": [
+			{
+				"name": "Key themes",
+				"children": [
+					{
+						"name": "Scientific journal",
+						"output": [{"type": "string"}]
+					},
+					{
+						"name": "Patent data",
+						"output": [{"type": "string"}]
+					},
+					{
+						"name": "Web data",
+						"output": [{"type": "string"}]
+					}
+				]
+			},
+			{
+				"name": "Key themes over time",
+				"children": [
+					{
+						"name": "Scientific journal",
+						"input": [{"type": "time_period"}],
+						"output": [{"type": "string"}]
+					},
+					{
+						"name": "Patent data",
+						"input": [{"type": "time_period"}],
+						"output": [{"type": "string"}]
+					},
+					{
+						"name": "Web data",
+						"input": [{"type": "time_period"}],
+						"output": [{"type": "string"}]
+					}
+				]
+			},
+			{
+				"name": "Influential technologies",
+				"output": [{"type": "text"}]
+			}
+		]
+	},
+	{
+		"name": "Technology prediction",
+		"children": [
+			{
+				"name": "Domain vector analysis",
+				"output": [{"type": "line"}]
+			},
+			{
+				"name": "Domain vector comparison",
+				"input": [{"type": "string"}],
+				"output": [{"type": "line"}]
+			},
+			{
+				"name": "Domain strength analysis",
+				"output": [{"type": "line"}]
+			},
+			{
+				"name": "Domain vector analysis with web data",
+				"output": [{"type": "line"}]
+			},
+			{
+				"name": "Micro-scale patent analysis",
+				"output": [{"type": "line"}]
+			}
+		]
+	}
+]

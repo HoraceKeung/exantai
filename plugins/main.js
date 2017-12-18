@@ -16,6 +16,10 @@ export default ({store}) => {
 	const arr = require('../static/languages/english.json')
 	store.commit('setLang', arr)
 	store.commit('setCurrentLangName', 'english')
+
+	// Load report elements
+	const reportElements = require('../static/reportElements.json')
+	store.commit('report/setReportElements', reportElements)
 }
 
 // Load bootstrap js

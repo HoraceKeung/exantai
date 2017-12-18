@@ -13,7 +13,9 @@
 import AppMenu from '~/components/app/AppMenu'
 import AppHeader from '~/components/app/AppHeader'
 import AppFooter from '~/components/app/AppFooter'
+import mixin from '~/assets/js/mixin'
 export default {
+	mixins: [mixin.global],
 	components: {AppMenu, AppHeader, AppFooter}
 }
 </script>

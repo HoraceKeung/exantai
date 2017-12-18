@@ -131,6 +131,16 @@ a {
 .hoverWhite:hover {
 	color: #fff;
 }
+.btn-top-right {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	padding: 0px;
+	min-width: 0px;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 0 0.25rem;
+}
 /* START Sticky footer */
 .flex-grow {
 	flex: 1;
